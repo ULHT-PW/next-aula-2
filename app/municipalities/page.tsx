@@ -18,7 +18,8 @@ export default function Municipalities() {
             <p key={municipality.id}>name={municipality.name}</p>
         ))}
 
-        <h1>Municípios</h1>
+        <h1 className="text-4xl font-bold">Municípios</h1>
+        <section className="">
         {data.sort((a,b) => a.name.localeCompare(b.name)).map((municipality) => (
             <MunicipalityCard
                 key={municipality.id}
@@ -27,5 +28,6 @@ export default function Municipalities() {
                 district_name={municipality.district_name}
             />
         ))}
+        </section>
     </>
 }
