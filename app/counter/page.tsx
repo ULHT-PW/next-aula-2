@@ -14,7 +14,7 @@ export default function page() {
     }, [count]);
 
     return <>
-        <p>Contador: {count}</p>
-        <button onClick={ () => setCount(count + 1) }>Incrementar</button>
+        <p className="text-2xl">Contador: {count}</p>
+        <button className="p-2 m-4 rounded bg-yellow-200 hover:bg-yellow-300 active:bg-yellow-400" onClick={ () => setCount(count + 1) }>Incrementar</button>
     </>
 }

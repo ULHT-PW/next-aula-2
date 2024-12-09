@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'; import useSWR from "swr";
-import MunicipalityCard from '../components/MunicipalityCard/MunicipalityCard';
-
+import MunicipalityCard from '@/components/MunicipalityCard/MunicipalityCard';
+import { Municipality } from '@/models/interfaces'
 
 export default function Municipalities() {
 
@@ -13,11 +13,6 @@ export default function Municipalities() {
     if (!data) return <div>No data available</div>;
 
     return <>
-        <h1 className="text-4xl pb-2">Municípios</h1>
-        {data.map((municipality) => (
-            <p key={municipality.id}>name={municipality.name}</p>
-        ))}
-
         <h1 className="text-4xl font-bold">Municípios</h1>
         <section className="">
         {data.sort((a,b) => a.name.localeCompare(b.name)).map((municipality) => (
